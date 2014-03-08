@@ -1,4 +1,4 @@
-#Python CloudSponge Contacts Import API Client
+#CloudSponge Contacts Import API Python Client
 
 ##Overview
 
@@ -28,3 +28,7 @@ Follow screen instructions
 ##Meta
 
 Licensed under the MIT license. http://opensource.org/licenses/MIT
+
+Special Thanks to Alistair Robinson for his blog post from which I
+borrowed profusely.
+http://blog.alistairrobinson.com/importing-contacts-with-cloudsponge-ember-js-and-django-rest-framework/
