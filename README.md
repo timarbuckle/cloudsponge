@@ -1,18 +1,18 @@
-#CloudSponge Contacts Import API Python Client
+##CloudSponge Contacts Import API Python Client
 
-##Overview
+###Overview
 
 TBD
 
 
-##Example Virtual Environment Setup
+###Example Virtual Environment Setup
 
     $ virtualenv --no-site-packages
     $ source env/bin/activate
     $ pip install -r requirements.txt
 
 
-##Test
+###Test
 
 Run a quick test to verify setup.
 
@@ -25,7 +25,7 @@ Edit the file, replace with your key and password
 Follow screen instructions
 
 
-##Meta
+###Meta
 
 Licensed under the MIT license. http://opensource.org/licenses/MIT
 
