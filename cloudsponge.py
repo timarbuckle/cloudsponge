@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-
+"""
+CloudSponge Contact Importer API Python Client
+"""
 
 import requests
 
@@ -56,27 +58,3 @@ class CloudSponge:
         url = self.get_url('get_contacts', import_id)
         r = requests.get(url, params=self.credentials)
         return r.json()
-
-
-def main():
-    from ConfigParser import ConfigParser
-    cp = ConfigParser()
-    cp.read('cloudsponge.conf')
-    credentials = dict(cp.items('Credentials'))
-    client = CloudSponge(credentials['domain_key'],
-                         credentials['domain_password'])
-    #resp = client.begin_import(client.Services.yahoo)
-    #import_id = resp['import_id']
-    #print 'import_id: {}'.format(import_id)
-    #print 'url: {}'.format(resp['url'])
-    #print 'Go to the url in your browser and grant permission. '
-    #      'Press Enter when ready.'
-
-    import_id = '31133771'
-    resp = client.get_events(import_id)
-    print resp
-    #client.begin_import(client.Services.gmail, opt_format='.xml')
-    #client.begin_import(client.Services.windowslive)
-
-if __name__ == '__main__':
-    main()
