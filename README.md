@@ -20,7 +20,7 @@ registering with cloudsponge.
 
     $ python test.py <service>
 
-Where <service> is gmail|yahoo|windowslive. Follow on-screen instructions.
+Where `<service>` is gmail|yahoo|windowslive. Follow on-screen instructions.
 
 ###Meta
 
