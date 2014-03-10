@@ -15,8 +15,8 @@ Run a quick test to verify setup.
 
     $ cp cloudsponge.conf.example cloudsponge.conf
 
-Edit the file, replace with your key and password after
-registering with cloudsponge.
+Edit the file cloudsponge.conf and update with your
+key and password received from registering with cloudsponge.
 
     $ python test.py <service>
 

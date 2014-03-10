@@ -27,26 +27,15 @@ def main(service):
     raw_input('Go to the url in your browser and grant permission. '
               'Press Enter when ready.')
 
-    # poll until import success
-    success = False
-    loop = True
-    while loop:
-        resp = client.get_events(import_id)
-        for event in resp['events']:
-            print '{}: {}'.format(event['event_type'], event['status'])
-            print '---'
-            if event['status'] == 'ERROR':
-                loop = False
-                break
-            if event['event_type'] == 'COMPLETE' and \
-                    event['status'] == 'COMPLETED':
-                success = True
-                loop = False
-                break
+    # poll until import success or error
+    status = "WORKING"
+    while status == "WORKING":
+        status = client.get_events_status(import_id)
         time.sleep(1)
 
     # print results
-    if success:
+    #if success:
+    if status == "COMPLETED":
         resp = client.get_contacts(import_id)
         for contact in resp['contacts']:
             print '{} {}'.format(contact['first_name'],
