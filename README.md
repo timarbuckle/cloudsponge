@@ -2,15 +2,12 @@
 
 ###Overview
 
-TBD
+This module provides a minimal python client wrapping the
+CloudSponge Contacts Import API.
 
+###Requirements
 
-###Example Virtual Environment Setup
-
-    $ virtualenv --no-site-packages
-    $ source env/bin/activate
-    $ pip install -r requirements.txt
-
+    $ pip install requests
 
 ###Test
 
@@ -18,12 +15,12 @@ Run a quick test to verify setup.
 
     $ cp cloudsponge.conf.example cloudsponge.conf
 
-Edit the file, replace with your key and password
+Edit the file, replace with your key and password after
+registering with cloudsponge.
 
-    $ python cloudsponge.py
+    $ python test.py <service>
 
-Follow screen instructions
-
+Where <service> is gmail|yahoo|windowslive. Follow on-screen instructions.
 
 ###Meta
 
